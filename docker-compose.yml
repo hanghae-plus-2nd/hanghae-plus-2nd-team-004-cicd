@@ -1,0 +1,14 @@
+version: "3.7"
+
+services:
+  greeting-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: ci-cd-test-app
+    ports:
+      - "8080:8080"
+    expose:
+      - "8080"
+    environment:
+      - SPRING_PROFILES_ACTIVE=dev
